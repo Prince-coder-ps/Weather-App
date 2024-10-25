@@ -1,0 +1,100 @@
+/* Full-screen background */
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Full screen height */
+    width: 100vw;       /* Full screen width */
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Vibrant gradient */
+    color:  black;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styling for the weather card in the center */
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.15); /* Transparent white background */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px); /* Enhanced glass effect */
+    max-width: 600px;  
+    width: 100%;
+    margin: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    font-size: 22px;
+    outline: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(234, 60, 7, 0.779); /* Placeholder color */
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button styling */
+button {
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}
+
+/* Weather info section */
+.weather-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.weather-info p {
+    font-size: 22px;
+    margin: 12px 0;
+}
+/* Dynamic background change based on weather conditions */
+.weather-info.sunny {
+    background-image: url('https://example.com/sunny-image.jpg'); /* Use your image URL */
+    background-size: cover;
+    color: black; /* Text color for sunny */
+    background-color: rgba(246, 255, 0, 0.908); /* Light yellow tint */
+}
+
+.weather-info.rainy {
+    background-image: url('https://example.com/rainy-image.jpg'); /* Use your image URL */
+    background-size: cover;
+    color: lightblue; /* Text color for rainy */
+    background-color: rgba(0, 0, 255, 0.3); /* Blue tint */
+}
+
+.weather-info.default-weather {
+    background-color: rgba(135, 206, 250, 0.5); /* Default background */
+    color: white;
+}
+
+
+/* Add more condition-specific backgrounds if needed */
